@@ -1,0 +1,11 @@
+cd src
+cd kernel/kernel/
+gcc -m32 -ffreestanding -fno-builtin -c kernel.c -o kernel.o
+ld -m elf_i386 -T linker.ld -o kernel.bin kernel.o
+mv kernel.o ../../
+mv kernel.bin ../../
+cd ../../
+cp kernel.bin iso/boot/
+grub-mkrescue -o redstone.iso iso
+mv redstone.iso ../
+cd ../
