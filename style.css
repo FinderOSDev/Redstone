@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar {
+    background-image: linear-gradient(rgba(91, 6, 14), rgba(229, 5, 27));
+}
