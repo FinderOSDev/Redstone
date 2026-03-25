@@ -1,0 +1,8 @@
+cd src
+g++ -ffreestanding -m32 -nostdlib -c kernel.cpp -o kernel.o
+ld -m elf_i386 -T link.ld kernel.o -o kernel.bin
+cp kernel.bin iso/boot/
+grub-mkrescue -o redst.iso iso
+mv redst.iso ../
+cd ../
+qemu-system-x86_64 -cdrom redst.iso
